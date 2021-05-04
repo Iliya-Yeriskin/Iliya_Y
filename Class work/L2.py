@@ -8,8 +8,12 @@ num=num+2
 print("Your number is : " + str(num))
 num2=num*10
 print("Your number is: " + str(num2))
-
-num3=5.5//2.2
+num3=5/2
 print("Yout number is: " + str(num3))
-print(type(num))
-
+print(type(num3))
+num4=5//2
+print("Yout number is: " + str(num4))
+print(type(num4))
+num5=5%2
+print("Yout number is: " + str(num5))
+print(type(num5))

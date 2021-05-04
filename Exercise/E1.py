@@ -6,7 +6,7 @@ Asarot=6
 Ahadot=7
 '''
 
-num=4567
+num=int(input("Enter a number with 4 digits: "))
 Alafim=num//1000
 Meot=num%1000//100
 Asarot=num%100//10
