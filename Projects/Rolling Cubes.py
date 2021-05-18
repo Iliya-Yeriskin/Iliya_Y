@@ -14,16 +14,16 @@ from time import sleep
 print("Welcome to the Rolling Cube Game\n--------------------------------\nEach round costs 3₪\n")
 money=input("How much money do you have?: ")
 startmoney=money
-r=int(money)//3
-print("Prepare to play: "+str(r)+" Rounds\n-----------------------")
-money=int(r)*3
+turns=int(money)//3
+print("Prepare to play: "+str(turns)+" Rounds\n-----------------------")
+money=int(turns)*3
 cube1=0
 cube2=0
-for i in range(r):
+for i in range(turns):
     startmoney=int(int(startmoney)-3)
     money=int(int(money)-3)
     print("Round: "+str(i+1)+" Rolling...")
-    sleep(3)
+    sleep(2)
     cube1=randint(1,6)
     cube2=randint(1,6)
     if cube1==cube2 & cube1==6:
