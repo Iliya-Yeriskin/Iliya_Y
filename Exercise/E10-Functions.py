@@ -47,12 +47,12 @@ def azzeret():
 def menu():
     while True:
         print("\nHello\nMenu:\n1.Dogs Details\n2.Friends list\n3.Factorial number(Azzeret)")
-        choise = int(input("\nPlease enter your choise: "))
-        if choise == 1:
+        choise = input("\nPlease enter your choise: ")
+        if choise == "1":
             dogs()
-        elif choise == 2:
+        elif choise == "2":
             friends()
-        elif choise == 3:
+        elif choise == "3":
             azzeret()
         else:
             print("Please enter ONLY 1-3!!")
