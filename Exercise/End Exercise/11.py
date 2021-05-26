@@ -8,12 +8,10 @@ num = int(input("Please enter a number between 1-10: "))
 
 
 def cube(x):
-    x = x-1
-    tot = 0
-    for i in range(0,x):
-        tot = tot + (x * x * x)
-        x = x-1
-    return tot
+    sum = 0
+    for i in range(1,x):
+        sum = sum + (i * i * i)
+    return sum
 
 
-print("Sum of all positive integers under your number: "+str(cube(num)))
+print("Cube sum of all positive integers under your number: "+str(cube(num)))
