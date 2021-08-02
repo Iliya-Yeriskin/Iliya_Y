@@ -31,7 +31,7 @@ do
               sudo docker run -d -p $port:8080 jenkins/jenkins
               echo "Container #$count Running"
               let count++
-              done
+            done
     elif [ $choise5 == "2" ]
     then
             echo "You choose 2"
@@ -89,7 +89,6 @@ do
               sudo docker run -d -p $port:9000 -v /var/run/docker.sock:/docker.sock \ --name dockerui abh1nav/dockerui:latest -e="/docker.sock"
               echo "Container #$count Running"
               let count++
-              done
             done
     elif [ $choise5 == "5" ]
     then
