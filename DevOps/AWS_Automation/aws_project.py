@@ -57,7 +57,7 @@ def stop():
 
 
 e = "n"
-while e == "n":
+while e == "n" or e == "no":
     print('\n'
           '             Hello\n'
           '          -----------\n'
@@ -78,12 +78,12 @@ while e == "n":
         stop()
     else:
         print("Please choose only 1-4 Only!!!")
-    e = input("Do you want to Exit y/n?")
-    if e == "n":
+    e = input("Do you want to Exit y/n?\nEnter Answer: ")
+    if e == "n" or e == "no":
         print("Returning to Menu")
         sleep(1.5)
         continue
-    elif e == "y":
+    elif e == "y" or e == "yes":
         print("Thank you Byebye!")
         break
     else:
