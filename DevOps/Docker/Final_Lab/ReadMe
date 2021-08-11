@@ -1,7 +1,11 @@
-             Hello
-          -----------
-   Welcome to Docker Menu Script
-____________________________________
+Explanation: docker_menu_lab2.sh is a menu of different Docker options.
+             docker_lab2.sh is also a menu with 2 options of customized nginx container & Dockerfile of customized ubuntu container.
+
+       docker_menu_lab2                                                                                             docker_lab2
+             Hello                                                                                                     Hello
+          -----------                                                                                              -------------
+   Welcome to Docker Menu Script                                                                               1.Create private nginx
+____________________________________                                                                           2.Create private Dockerfile
 
 Please Choose from the Following(1-6):
 1.Download Nginx+DockerUI Images
