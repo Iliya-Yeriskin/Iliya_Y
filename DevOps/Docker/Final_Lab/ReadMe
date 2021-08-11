@@ -1,7 +1,8 @@
 Explanation: docker_menu_lab2.sh is a menu of different Docker options.
-             docker_lab2.sh is also a menu with 2 options of customized nginx container & Dockerfile of customized ubuntu container.
+             docker_lab2.sh is also a menu with 2 options of customized nginx container & Dockerfile of customized ubuntu container and before that it 
+             checks if Docker installed on the machine.
 
-       docker_menu_lab2                                                                                             docker_lab2
+       docker_menu_lab2.sh                                                                                         docker_lab2.sh
              Hello                                                                                                     Hello
           -----------                                                                                              -------------
    Welcome to Docker Menu Script                                                                               1.Create private nginx
