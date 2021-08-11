@@ -4,6 +4,15 @@ import boto3
 from time import sleep
 
 
+def describe():
+    print("Showing all your Instances: ")
+    client = boto3.client('ec2')
+    response = client.describe_instances()
+    for r in response['Reservations']:
+       for i in r['Instances']:
+          print("ID: " + i['InstanceId'] + "\nIP Address: " + i['PrivateIpAddress'] + "\n-------------------------\n")
+
+
 def deploy():
     ec2 = boto3.resource('ec2')
     # create a new EC2 instance
@@ -56,35 +65,40 @@ def stop():
     print("The Instances " + str(ids) + " Stopped")
 
 
-e = "n"
-while e == "n" or e == "no":
-    print('\n'
-          '             Hello\n'
-          '          -----------\n'
-          '    Welcome to AWS EC2 Menu:\n'
-          '--------------------------------\n'
-          '1.Delpoy EC2\n'
-          '2.Terminate EC2\n'
-          '3.Start EC2\n'
-          '4.Stop EC2\n')
-    choice = input("Enter your Choice: ")
-    if choice == "1":
-        deploy()
-    elif choice == "2":
-        terminate()
-    elif choice == "3":
-        start()
-    elif choice == "4":
-        stop()
-    else:
-        print("Please choose only 1-4 Only!!!")
-    e = input("Do you want to Exit y/n?\nEnter Answer: ")
-    if e == "n" or e == "no":
-        print("Returning to Menu")
-        sleep(1.5)
-        continue
-    elif e == "y" or e == "yes":
-        print("Thank you Byebye!")
-        break
-    else:
-        print("Enter y/n ONLY!")
+def menu():
+    while (True):
+        print('\n'
+              '             Hello\n'
+              '          -----------\n'
+              '    Welcome to AWS EC2 Menu:\n'
+              '--------------------------------\n'
+              '1.Describe EC2 Instances\n'
+              '2.Delpoy EC2\n'
+              '3.Terminate EC2\n'
+              '4.Start EC2\n'
+              '5.Stop EC2\n')
+        choice = input("Enter your Choice: ")
+        if choice == "1":
+            describe()
+        elif choice == "2":
+            deploy()
+        elif choice == "3":
+            terminate()
+        elif choice == "4":
+            start()
+        elif choice == "5":
+            stop()
+        else:
+            print("Please choose only 1-5 Only!!!")
+            continue
+        e = input("Do you want to Exit y/n?\nEnter Answer: ")
+        if e == "y" or e == "yes":
+            print("Thank You ByeBye...")
+            sleep(1.5)
+            break
+        else:
+            print("Returning to Menu...")
+            sleep (1.5)
+
+
+menu()
